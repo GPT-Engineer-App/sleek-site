@@ -35,13 +35,16 @@ const DesktopNav = () => (
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
     >
       <Package2 className="h-6 w-6" />
-      <span className="sr-only">Acme Inc</span>
+      <span className="sr-only">FreeGovCourses</span>
     </NavItem>
     {navItems.map((item) => (
       <NavItem key={item.to} to={item.to}>
         {item.title}
       </NavItem>
     ))}
+    <Button variant="outline" className="ml-auto">
+      Sign Up
+    </Button>
   </nav>
 );
 
@@ -60,13 +63,16 @@ const MobileNav = () => (
           className="flex items-center gap-2 text-lg font-semibold"
         >
           <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <span className="sr-only">FreeGovCourses</span>
         </NavItem>
         {navItems.map((item) => (
           <NavItem key={item.to} to={item.to}>
             {item.title}
           </NavItem>
         ))}
+        <Button variant="outline" className="mt-4">
+          Sign Up
+        </Button>
       </nav>
     </SheetContent>
   </Sheet>
