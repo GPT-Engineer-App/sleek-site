@@ -9,7 +9,7 @@ const Courses = () => {
     <div className="space-y-12">
       <HeroSection />
       <CoursesList setSelectedCourse={setSelectedCourse} />
-      {selectedCourse && <CourseDetailsModal course={selectedCourse} />}
+      {selectedCourse && <CourseDetailsModal course={selectedCourse} setSelectedCourse={setSelectedCourse} />}
     </div>
   );
 };
@@ -42,7 +42,7 @@ const CoursesList = ({ setSelectedCourse }) => (
   </section>
 );
 
-const CourseDetailsModal = ({ course }) => (
+const CourseDetailsModal = ({ course, setSelectedCourse }) => (
   <Dialog open={true} onOpenChange={() => setSelectedCourse(null)}>
     <DialogContent>
       <DialogHeader>
